@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.example.a4foods.Activity.CartActivity">
+
+    <androidx.drawerlayout.widget.DrawerLayout
+        android:id="@+id/drawerMain"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <androidx.appcompat.widget.Toolbar
+                android:id="@+id/toolbarCart"
+                android:layout_width="match_parent"
+                android:layout_height="?attr/actionBarSize"
+                android:layout_gravity="right"
+                android:background="@color/colorOnPrimary"
+                app:contentInsetStartWithNavigation="40dp">
+
+                <ImageView
+                    android:id="@+id/imgBackCart"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="left"
+                    android:onClick="BackCartOnclickListener"
+                    android:padding="10dp"
+                    app:srcCompat="@drawable/baseline_ic_back_white"
+                    tools:ignore="SpeakableTextPresentCheck" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:text="Giỏ hàng của tôi"
+                    android:textAllCaps="true"
+                    android:textColor="@color/white"
+                    android:layout_gravity="center"
+                    android:textSize="18dp"
+                    android:onClick="DeleteCartOnclick"
+                    android:gravity="center"
+                    android:paddingRight="22dp"
+                    android:paddingLeft="22dp">
+                </TextView>
+
+                <TextView
+                    android:id="@+id/tvDeleteCart"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:text="Xóa"
+                    android:textColor="@color/white"
+                    android:layout_gravity="right"
+                    android:textSize="22dp"
+                    android:onClick="DeleteCartOnclick"
+                    android:gravity="center"
+                    android:paddingRight="22dp"
+                    android:paddingLeft="22dp">
+
+                </TextView>
+
+            </androidx.appcompat.widget.Toolbar>
+
+            <ScrollView
+                android:id="@+id/scrollView2"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/toolbarCart">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical">
+
+                    <androidx.recyclerview.widget.RecyclerView
+                        android:id="@+id/rcvGioHang"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginBottom="100dp"
+                        tools:listitem="@layout/item_cart" />
+                </LinearLayout>
+
+            </ScrollView>
+
+        </LinearLayout>
+
+
+    </androidx.drawerlayout.widget.DrawerLayout>
+
+
+
+    <TableLayout
+        android:id="@+id/tblGioHang"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:background="@color/white"
+        app:layout_constraintStart_toStartOf="parent">
+
+
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <Button
+                android:id="@+id/btnMuahang"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="14dp"
+                android:layout_marginBottom="20dp"
+                android:layout_span="2"
+                android:layout_weight="1.5"
+                android:onClick="BuyOnclickListener"
+                android:background="@drawable/bogocbutton"
+                android:text="Mua hàng"
+                android:textColor="@color/white"
+                android:textSize="20dp" />
+
+        </TableRow>
+
+    </TableLayout>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

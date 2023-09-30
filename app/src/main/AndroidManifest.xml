@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+    <uses-permission android:name="android.permission.INTERNET" />
+    <application
+        android:allowBackup="true"
+        android:dataExtractionRules="@xml/data_extraction_rules"
+        android:fullBackupContent="@xml/backup_rules"
+        android:icon="@drawable/logo"
+        android:label="4Foods"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.DoAnApp"
+        tools:targetApi="31">
+        <activity
+            android:name="com.example.a4foods.Admin.OrderDetailAdminActivity"
+            android:exported="false" />
+        <activity
+            android:name="com.example.a4foods.Admin.ListOrderForAdmin"
+            android:exported="false" />
+        <activity
+            android:name="com.example.a4foods.Admin.AddBrand"
+            android:exported="false" />
+        <activity
+            android:name="com.example.a4foods.Activity.OrderDetailActivity"
+            android:exported="false" />
+        <activity
+            android:name="com.example.a4foods.Admin.AllProAdmin"
+            android:exported="false" />
+        <activity
+            android:name="com.example.a4foods.Admin.EditPro"
+            android:exported="false" />
+        <activity
+            android:name="com.example.a4foods.Admin.MainActivityAdmin"
+            android:exported="false" />
+        <activity
+            android:name="com.example.a4foods.Admin.AddProduct"
+            android:exported="false" />
+        <activity
+            android:name="com.example.a4foods.Activity.PayProductActivity"
+            android:exported="false" />
+        <activity
+            android:name="com.example.a4foods.Activity.SearchActivity"
+            android:exported="false" />
+        <activity
+            android:name="com.example.a4foods.ui.Register"
+            android:exported="false" />
+        <activity
+            android:name="com.example.a4foods.ui.Login"
+            android:exported="false" />
+        <activity
+            android:name="com.example.a4foods.Activity.CartActivity"
+            android:exported="false" />
+        <activity
+            android:name="com.example.a4foods.Activity.ProductInfo"
+            android:exported="false" />
+        <activity
+            android:name="com.example.a4foods.Activity.ShopActivity"
+            android:exported="false" />
+        <activity
+            android:name="com.example.a4foods.Activity.MainActivity"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+    </application>
+
+</manifest>

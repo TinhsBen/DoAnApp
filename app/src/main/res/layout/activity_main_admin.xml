@@ -1,0 +1,169 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.example.a4foods.Admin.MainActivityAdmin">
+
+    <TextView
+        android:id="@+id/textView6"
+        android:layout_marginTop="100dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:textSize="30dp"
+        android:textColor="@color/colorOnPrimary"
+        android:textStyle="bold"
+        android:text="ADMIN" />
+
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginTop="60dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp">
+
+        <TextView
+            android:id="@+id/tvAdmin_SP"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:textColor="@color/black"
+            android:textSize="18dp"
+            android:text="Sản phẩm" />
+
+        <Button
+            android:id="@+id/btnSP_Xem"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/bogoc"
+            android:onClick="ShowAllProOnclick"
+            android:layout_marginRight="10dp"
+            android:text="XEM TẤT CẢ" />
+
+        <Button
+            android:id="@+id/btnSP_Them"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:onClick="AddProOnclick"
+            android:background="@drawable/bogocbutton"
+            android:textColor="@color/white"
+            android:text="Thêm " />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginTop="20dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp">
+
+        <TextView
+            android:id="@+id/tvAdmin_TheLoai"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:textColor="@color/black"
+            android:textSize="18dp"
+            android:text="Loại" />
+
+        <Button
+            android:id="@+id/btnTL_Xem"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/bogoc"
+            android:layout_marginRight="10dp"
+            android:text="XEM TẤT CẢ" />
+
+        <Button
+            android:id="@+id/btnTL_Them"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/bogocbutton"
+            android:textColor="@color/white"
+            android:text="THÊM" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginTop="20dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp">
+
+        <TextView
+            android:id="@+id/tvAdmin_Nhanhieu"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:textColor="@color/black"
+            android:textSize="18dp"
+            android:text="Mục" />
+
+        <Button
+            android:id="@+id/btnNH_Xem"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/bogoc"
+            android:layout_marginRight="10dp"
+            android:text="XEM TẤT CẢ" />
+
+        <Button
+            android:id="@+id/btnNH_Them"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/bogocbutton"
+            android:textColor="@color/white"
+            android:text="THÊM" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginTop="20dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp">
+
+        <TextView
+            android:id="@+id/tvAdmin_Donhang"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:textColor="@color/black"
+            android:textSize="18dp"
+            android:text="Đơn hàng" />
+
+        <Button
+            android:id="@+id/btnDH_Xem"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/bogoc"
+            android:onClick="ViewAllOrderOnclick"
+            android:layout_marginRight="10dp"
+            android:text="XEM TẤT CẢ" />
+
+
+    </LinearLayout>
+    <TextView
+        android:id="@+id/tvLogoutAdmin"
+        android:layout_marginTop="50dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:onClick="LogOutAdminOnclick"
+        android:background="@drawable/vientron"
+        android:textSize="20dp"
+        android:layout_marginRight="8dp"
+        android:padding="5dp"
+        android:textColor="@color/colorPrimary"
+        android:textStyle="bold"
+        android:text="Đăng xuất" />
+</LinearLayout>

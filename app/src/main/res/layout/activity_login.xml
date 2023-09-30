@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.example.a4foods.ui.Login">
+
+    <ImageView
+        android:id="@+id/imgLogo"
+        android:layout_width="569dp"
+        android:layout_height="421dp"
+        android:background="@drawable/log2"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+    <ImageView
+        android:layout_width="338dp"
+        android:layout_height="435dp"
+        android:layout_marginTop="50dp"
+        android:background="@drawable/khung"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.492"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+    <TextView
+        android:id="@+id/tvLogIn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="90dp"
+        android:gravity="center"
+        android:text="4Food xin chào !"
+        android:textColor="#975344"
+        android:textSize="30sp"
+        android:textStyle="bold"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+    <Button
+        android:id="@+id/btnLogIn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:background="@drawable/bogocbutton"
+        android:onClick="btnLoginOnclick"
+        android:layout_marginTop="50dp"
+        android:paddingLeft="40dp"
+        android:paddingRight="40dp"
+        android:text="Đăng nhập"
+        android:textColor="@color/white"
+        android:textSize="20dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/edtPasswordLogin" />
+    <TextView
+        android:id="@+id/tvTb1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="100dp"
+        android:text="Bạn chưa có tài khoản ?"
+        android:textColor="#783F32"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/btnLogIn" />
+
+    <Button
+        android:id="@+id/btnDK"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:text="ĐĂNG KÝ NGAY"
+        android:textSize="15sp"
+        android:textStyle="bold"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        android:onClick="btnDK_onclick"
+        app:layout_constraintTop_toBottomOf="@id/tvTb1"/>
+
+    <com.google.android.material.textfield.TextInputEditText
+        android:id="@+id/edtPasswordLogin"
+        android:layout_width="310dp"
+        android:layout_height="53dp"
+        android:layout_marginTop="50dp"
+        android:background="@drawable/botron"
+        android:drawableLeft="@drawable/baseline_password_24"
+        android:drawablePadding="5dp"
+        android:hint="Nhập mật khẩu"
+        android:inputType="textPassword"
+        android:padding="15dp"
+        android:textSize="17sp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/edtEmailLogin" />
+
+    <com.google.android.material.textfield.TextInputEditText
+        android:id="@+id/edtEmailLogin"
+        android:layout_width="310dp"
+        android:layout_marginTop="50dp"
+        android:layout_height="53dp"
+        android:background="@drawable/botron"
+        android:drawableLeft="@drawable/baseline_account_circle_24"
+        android:drawablePadding="5dp"
+        android:hint="Nhập tài khoản"
+        android:padding="15dp"
+        android:textSize="17sp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tvLogIn" />
+    <ImageView
+        android:layout_width="452dp"
+        android:layout_height="171dp"
+        android:background="@drawable/log1"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/btnDK"/>
+</androidx.constraintlayout.widget.ConstraintLayout>

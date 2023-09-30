@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginRight="5dp"
+    android:layout_marginLeft="5dp"
+    android:layout_marginTop="10dp"
+    app:cardCornerRadius="10dp">
+
+
+
+   <LinearLayout
+       android:layout_width="match_parent"
+       android:layout_height="wrap_content">
+
+       <LinearLayout
+           android:layout_width="match_parent"
+           android:layout_height="wrap_content"
+           android:layout_marginLeft="10dp"
+           android:layout_marginRight="15dp"
+           android:orientation="vertical">
+
+           <TextView
+               android:id="@+id/tvMaDon"
+               android:layout_width="match_parent"
+               android:layout_height="wrap_content"
+               android:text="Mã đơn hàng: 01"
+               android:textColor="@color/black"
+               android:textSize="17dp"
+               android:textStyle="bold" />
+
+           <TextView
+               android:id="@+id/tvThoiGian"
+               android:layout_width="match_parent"
+               android:layout_height="wrap_content"
+               android:layout_marginTop="7dp"
+               android:text="Thời gian đặt: 28-08-23 11:11:11"
+               android:textColor="@color/black"
+               android:textSize="17dp"
+               android:textStyle="bold" />
+
+         <TextView
+             android:layout_width="wrap_content"
+             android:layout_height="wrap_content"
+             android:layout_marginTop="4dp"
+             android:layout_marginBottom="4dp"
+             android:text="Chi tiết"
+             android:textColor="@color/black"
+             android:textStyle="bold"
+             android:textAllCaps="true"
+             android:paddingRight="10dp"
+             android:paddingLeft="10dp"
+             android:paddingTop="10dp"
+             android:paddingBottom="10dp"
+             android:background="@color/silver2"
+             android:gravity="center"
+             android:layout_gravity="end">
+         </TextView>
+
+
+       </LinearLayout>
+
+   </LinearLayout>
+
+
+</androidx.cardview.widget.CardView>

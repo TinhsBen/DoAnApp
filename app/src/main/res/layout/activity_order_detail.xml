@@ -1,0 +1,207 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.example.a4foods.Activity.OrderDetailActivity" >
+
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbarCart"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:layout_gravity="right"
+        android:background="@color/colorOnPrimary"
+        app:contentInsetStartWithNavigation="40dp">
+
+        <ImageView
+            android:id="@+id/imgBackToHome"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:onClick="BackInfoOnclickListener"
+            app:srcCompat="@drawable/baseline_home_34_white"
+            android:layout_gravity="left"
+            android:padding="10dp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:text="Đơn hàng của tôi"
+            android:textAllCaps="true"
+            android:textColor="@color/white"
+            android:layout_gravity="center"
+            android:textSize="18dp"
+            android:onClick="DeleteCartOnclick"
+            android:gravity="center"
+            android:paddingRight="22dp"
+            android:paddingLeft="22dp">
+        </TextView>
+
+    </androidx.appcompat.widget.Toolbar>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:weightSum="2"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/btnDonDangGiao"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="18dp"
+            android:layout_marginRight="2dp"
+            android:layout_weight="1"
+            android:onClick="btnDangGiaoOnclick"
+            android:background="#E8E8E8"
+            android:text="Đang giao"/>
+
+        <Button
+            android:id="@+id/btnDonDaGiao"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:layout_marginLeft="2dp"
+            android:onClick="btnDaGiaoOnclick"
+            android:textSize="18dp"
+            android:background="#C0C0C0"
+            android:text="Đã giao"/>
+
+    </LinearLayout>
+
+    <ScrollView
+        android:id="@+id/scrMyOder"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:id="@+id/profileOrder"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="3"
+                android:padding="10dp"
+                android:text="Thông tin người nhận: "
+                android:textColor="@color/black"
+                android:textSize="22dp" />
+
+            <TextView
+                android:id="@+id/tvNameUserOrderD"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_weight="3"
+                android:paddingLeft="20dp"
+                android:paddingTop="6dp"
+                android:text="Le Dat "
+                android:textColor="@color/black"
+                android:textSize="18dp" />
+
+            <TextView
+                android:id="@+id/tvPhoneUserOrderD"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_weight="3"
+                android:paddingLeft="20dp"
+                android:paddingTop="6dp"
+                android:text="sdt"
+                android:textColor="@color/black"
+                android:textSize="18dp" />
+
+            <TextView
+                android:id="@+id/tvAddressUserOrderD"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_weight="3"
+                android:paddingLeft="20dp"
+                android:paddingTop="6dp"
+                android:text="HUFLIT"
+                android:textColor="@color/black"
+                android:textSize="18dp" />
+
+            </LinearLayout>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="32dp"
+                android:layout_marginBottom="8dp"
+                android:background="@drawable/vientextview"
+                android:layout_weight="3"
+                android:padding="10dp"
+                android:text="Món: "
+                android:textColor="@color/black"
+                android:textSize="22dp" />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rcvOrderD"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginBottom="8dp"/>
+
+            <TableLayout
+                android:id="@+id/tbloGioHang"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <TextView
+                        android:id="@+id/tvTongDon"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/black"
+                        android:textSize="20dp"
+                        android:textStyle="bold"
+                        android:padding="10dp"
+                        android:text="Tổng đơn hàng" />
+
+                    <TextView
+                        android:id="@+id/tvTongTienD"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="right"
+                        android:padding="10dp"
+                        android:layout_marginRight="10dp"
+                        android:textColor="@color/black"
+                        android:textSize="20dp"
+                        android:layout_weight="3"
+                        android:text="2.300.000"/>
+                </TableRow>
+
+            </TableLayout>
+
+        </LinearLayout>
+    </ScrollView>
+
+    <TextView
+        android:id="@+id/tvThongBao"
+        android:visibility="gone"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:text="Bạn không có đơn hàng nào!"
+        android:layout_marginTop="32dp"
+        android:textSize="18dp"/>
+
+
+</LinearLayout>

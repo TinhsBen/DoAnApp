@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.example.a4foods.Admin.OrderDetailAdminActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/colorOnPrimary"
+        android:weightSum="4"
+        android:orientation="horizontal">
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:onClick="backOnclickListener"
+            app:srcCompat="@drawable/baseline_ic_back_white"
+            android:layout_gravity="right"
+            android:layout_weight="1"
+            android:padding="10dp"
+            android:layout_marginRight="6dp"/>
+
+        <TextView
+            android:id="@+id/tvNamePageAdmin"
+            android:layout_width="wrap_content"
+            android:layout_height="56dp"
+            android:text="Chi tiết đơn hàng"
+            android:textAllCaps="true"
+            android:textColor="@color/white"
+            android:layout_weight="2"
+            android:gravity="center"
+            android:textSize="20dp"
+            android:background="@color/colorOnPrimary">
+
+        </TextView>
+
+        <ImageView
+            android:id="@+id/imgCartInInfo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:onClick="IconHomeAdminOnclickListener"
+            app:srcCompat="@drawable/baseline_home_34_white"
+            android:layout_gravity="right"
+            android:layout_weight="1"
+            android:padding="10dp"
+            android:layout_marginRight="6dp"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:layout_marginLeft="6dp"
+        android:layout_marginRight="6dp"
+        android:orientation="vertical">
+
+
+        <TextView
+            android:id="@+id/tvMaDonForAdmin"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Mã đơn hàng: 01"
+            android:textColor="@color/black"
+            android:textSize="20dp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/tvNameForAdmin"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Tên: Dat"
+            android:textColor="@color/black"
+            android:textSize="20dp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/tvSdtForAdmin"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="SĐT: 0123456789"
+            android:textColor="@color/black"
+            android:textSize="20dp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/tvDiaChiForAdmin"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="HUFLIT"
+            android:textColor="@color/black"
+            android:textSize="20dp"
+            android:textStyle="bold" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rcvOrderForAdmin"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp">
+
+        </androidx.recyclerview.widget.RecyclerView>
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Đã giao"
+            android:background="@drawable/botron_button_dong"
+            android:onClick="btnDaGiaoHangOnclick"
+            android:textColor="@color/white"
+            android:layout_marginTop="8dp"
+            android:layout_gravity="end"
+            android:paddingRight="20dp"
+            android:paddingLeft="20dp"
+            android:textSize="18dp">
+        </Button>
+
+    </LinearLayout>
+
+</LinearLayout>
